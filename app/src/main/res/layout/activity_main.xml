@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.dmko.converter.activities.MainActivity">
+
+    <EditText
+        android:id="@+id/celsiusEditText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="numberDecimal|numberSigned"
+        app:layout_constraintLeft_toRightOf="@+id/celsiusText"
+        app:layout_constraintRight_toLeftOf="@+id/celsiusSign"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="16dp" />
+
+    <EditText
+        android:id="@+id/fahrenheitEditText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="numberDecimal|numberSigned"
+        app:layout_constraintLeft_toRightOf="@+id/fahrenheitText"
+        app:layout_constraintRight_toLeftOf="@+id/fahrenheitSign"
+        android:layout_marginTop="16dp"
+        app:layout_constraintTop_toBottomOf="@+id/celsiusEditText" />
+
+    <EditText
+        android:id="@+id/kelvinEditText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="numberDecimal"
+        app:layout_constraintLeft_toRightOf="@+id/kelvinText"
+        app:layout_constraintRight_toLeftOf="@+id/kelvinSign"
+        android:layout_marginTop="16dp"
+        app:layout_constraintTop_toBottomOf="@+id/fahrenheitEditText"
+        android:nextFocusDown="@id/celsiusEditText"/>
+
+    <TextView
+        android:id="@+id/celsiusText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/celsius"
+        app:layout_constraintBaseline_toBaselineOf="@+id/celsiusEditText"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@+id/celsiusEditText" />
+
+    <TextView
+        android:id="@+id/fahrenheitText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/fahrenheit"
+        app:layout_constraintBaseline_toBaselineOf="@+id/fahrenheitEditText"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@+id/fahrenheitEditText" />
+
+    <TextView
+        android:id="@+id/kelvinText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/kelvin"
+        app:layout_constraintBaseline_toBaselineOf="@+id/kelvinEditText"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@+id/kelvinEditText" />
+
+    <TextView
+        android:id="@+id/celsiusSign"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/c"
+        app:layout_constraintBaseline_toBaselineOf="@+id/celsiusEditText"
+        app:layout_constraintLeft_toRightOf="@+id/celsiusEditText"
+        app:layout_constraintRight_toRightOf="parent" />
+
+    <TextView
+        android:id="@+id/fahrenheitSign"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/f"
+        app:layout_constraintBaseline_toBaselineOf="@+id/fahrenheitEditText"
+        app:layout_constraintLeft_toRightOf="@+id/fahrenheitEditText"
+        app:layout_constraintRight_toRightOf="parent" />
+
+    <TextView
+        android:id="@+id/kelvinSign"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/k"
+        app:layout_constraintBaseline_toBaselineOf="@+id/kelvinEditText"
+        app:layout_constraintLeft_toRightOf="@+id/kelvinEditText"
+        app:layout_constraintRight_toRightOf="parent" />
+
+    <Button
+        android:id="@+id/clearButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginTop="16dp"
+        android:text="@string/clear"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/kelvinEditText" />
+
+</android.support.constraint.ConstraintLayout>

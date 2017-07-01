@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Converter</string>
+    <string name="k">K</string>
+    <string name="f">°F</string>
+    <string name="c">°C</string>
+    <string name="kelvin">Kelvin</string>
+    <string name="fahrenheit">Fahrenheit</string>
+    <string name="celsius">Celsius</string>
+    <string name="clear">Clear</string>
+</resources>
